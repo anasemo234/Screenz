@@ -5,15 +5,18 @@ import { Container } from "./NavBar";
 import "../Styles/Videos.css";
 import NoImg from "./no-image.png";
 function Movies() {
-  const { toggle } = useContext(Container);
+  const { toggle, inputValue } = useContext(Container);
+  const input = inputValue;
   const [moviesData, setMoviesData] = useState([]);
   const [trailer, setTrailer] = useState(true);
-  const Api = "https://api.themoviedb.org/3/discover/movie";
+  const Shown = input ? "search" : "discover";
+  const Api = `https://api.themoviedb.org/3/${Shown}/movie`;
   const Images = "https://image.tmdb.org/t/p/w500/";
   const MovieCall = async () => {
     const data = await axios.get(Api, {
       params: {
         api_key: "2b0ff7fb5247ceaf183dcd49092a2322",
+        query: input,
       },
     });
     const results = data.data.results;
@@ -21,7 +24,7 @@ function Movies() {
   };
   useEffect(() => {
     MovieCall();
-  }, []);
+  }, [input]);
 
   return (
     <Fragment>
