@@ -31,34 +31,47 @@ function TvShows() {
   };
   return (
     <Fragment>
-      {showData.map((shows) => {
-        return (
-          <Fragment key={shows.id}>
-            <div id={trailer ? "container" : "NoContainer"}>
-              <AiFillPlayCircle
-                color="#fff"
-                fontSize={40}
-                id={trailer ? "playIcon" : "hide"}
-                onClick={() => TvShowTitle(shows)}
-              />
-              <img
-                src={
-                  shows.poster_path ? `${Images}${shows.poster_path}` : NoImg
-                }
-                alt=""
-                onClick={() => TvShowTitle(shows)}
-              />
-              <h3
-                id={shows.name.length > 28 ? "smaller-Text" : ""}
-                className={toggle ? "mainColor" : "secondaryColor"}
-              >
-                {shows.name}
-              </h3>
-            </div>
-          </Fragment>
-        );
-      })}
-      <AiOutlineClose onClick={() => setTrailer(true)} />
+      <div className={toggle ? "mainBgColor" : "secondaryBgcolor"}>
+        <div className="movies-container">
+          {showData.map((shows) => {
+            return (
+              <Fragment key={shows.id}>
+                <div id={trailer ? "container" : "NoContainer"}>
+                  <AiFillPlayCircle
+                    color="#fff"
+                    fontSize={40}
+                    id={trailer ? "playIcon" : "hide"}
+                    onClick={() => TvShowTitle(shows)}
+                  />
+                  <img
+                    src={
+                      shows.poster_path
+                        ? `${Images}${shows.poster_path}`
+                        : NoImg
+                    }
+                    alt=""
+                    onClick={() => TvShowTitle(shows)}
+                  />
+                  <h3
+                    id={shows.name.length > 28 ? "smaller-Text" : ""}
+                    className={toggle ? "mainColor" : "secondaryColor"}
+                  >
+                    {shows.name}
+                  </h3>
+                </div>
+              </Fragment>
+            );
+          })}
+          <AiOutlineClose
+            id={trailer ? "Nothing" : "Exit1"}
+            className={toggle ? "DarkTheme" : "LightThemeClose"}
+            fontSize={55}
+            color="red"
+            cursor={"pointer"}
+            onClick={() => setTrailer(true)}
+          />
+        </div>
+      </div>
     </Fragment>
   );
 }
