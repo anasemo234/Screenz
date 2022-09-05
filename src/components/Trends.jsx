@@ -24,7 +24,9 @@ function Trends() {
   };
 
   useEffect(() => {
-    Trends();
+    setTimeout(() => {
+      Trends();
+    }, 50);
   }, []);
 
   const TrendTitle = (trend) => {

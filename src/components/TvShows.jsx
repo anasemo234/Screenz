@@ -5,26 +5,32 @@ import "../Styles/Videos.css";
 import { AiFillPlayCircle } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import NoImg from "./no-image.png";
+import TrailerTvShows from "../Trailers/TrailerTvShows";
 
 function TvShows() {
   const { toggle, inputValue } = useContext(Container);
+  const input = inputValue;
   const [showData, setShowData] = useState([]);
   const [trailer, setTrailer] = useState(true);
+  const Shown = input ? "search" : "discover";
   const [title, setTitle] = useState("");
-  const Api = "https://api.themoviedb.org/3/discover/tv";
+  const Api = `https://api.themoviedb.org/3/${Shown}/tv`;
   const Images = "https://image.tmdb.org/t/p/w500/";
   const TvShows = async () => {
     const data = await axios.get(Api, {
       params: {
         api_key: "2b0ff7fb5247ceaf183dcd49092a2322",
+        query: input,
       },
     });
     const results = data.data.results;
     setShowData(results);
   };
   useEffect(() => {
-    TvShows();
-  }, []);
+    setTimeout(() => {
+      TvShows();
+    }, 50);
+  }, [input]);
   const TvShowTitle = (shows) => {
     setTitle(shows.name);
     setTrailer(!trailer);
@@ -62,6 +68,7 @@ function TvShows() {
               </Fragment>
             );
           })}
+          {trailer ? console.log : <TrailerTvShows TvShowsTitle={title} />}
           <AiOutlineClose
             id={trailer ? "Nothing" : "Exit1"}
             className={toggle ? "DarkTheme" : "LightThemeClose"}
