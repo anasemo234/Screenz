@@ -4,6 +4,7 @@ import axios from "axios";
 import { AiFillPlayCircle, AiOutlineClose } from "react-icons/ai";
 import NoImg from "./no-image.png";
 import "../Styles/Videos.css";
+import TrailerTrending from "../Trailers/TrailerTrending";
 
 function Trends() {
   const { toggle } = useContext(Container);
@@ -67,6 +68,11 @@ function Trends() {
               </Fragment>
             );
           })}
+          {trailer ? (
+            console.log
+          ) : (
+            <TrailerTrending TrendTitle={trendTitle} toggle={toggle} />
+          )}
           <AiOutlineClose
             id={trailer ? "Nothing" : "Exit1"}
             className={toggle ? "DarkTheme" : "LightThemeClose"}

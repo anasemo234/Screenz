@@ -17,7 +17,9 @@ function NavBar() {
       <Fragment>
         <nav className={toggle ? "" : "navBarColor"}>
           <div className="nav-options">
-            <h1 id={toggle ? "" : "heading"}>SCREENZ</h1>
+            <NavLink to="">
+              <h1 id={toggle ? "" : "heading"}>SCREENZ</h1>
+            </NavLink>
 
             <NavLink
               to=""
@@ -61,7 +63,11 @@ function NavBar() {
               placeholder="Search"
               onChange={(e) => setInputValue(e.target.value)}
             />
-            <HiSearch fontSize={21} color="black" id="search" />
+            <HiSearch
+              fontSize={21}
+              color={toggle ? "black" : "#ff206e"}
+              id="search"
+            />
             <div id="Color-switcher" onClick={() => setToggle(!toggle)}>
               <div
                 id={toggle ? "Color-switcher-mover" : "Color-switcher-moved"}
