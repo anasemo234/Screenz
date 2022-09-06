@@ -7,7 +7,7 @@ nav {
     align-items: center;
 }
 nav h1{
-    color: #fff;
+    color: #A350A3;
     margin-left: 40px;
 }
 nav a {
@@ -22,14 +22,15 @@ nav span{
 }
 nav span:hover{
     color: #fff;
-    border-bottom: 2px solid #EE9B00;
+    border-bottom: 2px solid #A350A3;
     padding-bottom: 5px;
 }
 span #HomeLight, #MoviesLight, #TrendingLight, #PricingLight{
     color: #fff;
 }
 span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:hover{
-    border-bottom: 2px solid #ff206e;
+    border-bottom: 2px solid #fff;
+    color: #C1436D;;
 }
 #navBarColor{
     background-color: #38bdab;
@@ -40,7 +41,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
     align-items: center;
 }
 #heading{
-    color: #ff206e;
+    color: #C1436D;
 }
 #navBarColor span:hover{
     border-bottom: 2px solid #ff206e;

@@ -24,7 +24,7 @@ function NavBar() {
             <NavLink
               to=""
               style={({ isActive }) => {
-                return { color: isActive ? "#fff" : " #EE9B00" };
+                return { color: isActive ? "#A350A3" : " #fff" };
               }}
             >
               <span id={toggle ? "Movies" : "MoviesLight"}>Movies</span>
@@ -33,7 +33,7 @@ function NavBar() {
             <NavLink
               to="/TvShows"
               style={({ isActive }) => {
-                return { color: isActive ? "#fff" : " #EE9B00" };
+                return { color: isActive ? "#A350A3" : " #fff" };
               }}
             >
               <span id={toggle ? "Movies" : "MoviesLight"}>Tv Shows</span>
@@ -42,7 +42,7 @@ function NavBar() {
             <NavLink
               to="Trending"
               style={({ isActive }) => {
-                return { color: isActive ? "#fff" : " #EE9B00" };
+                return { color: isActive ? "#A350A3" : " #fff" };
               }}
             >
               <span id={toggle ? "Movies" : "MoviesLight"}>Trending</span>
@@ -51,7 +51,7 @@ function NavBar() {
             <NavLink
               to="Pricing"
               style={({ isActive }) => {
-                return { color: isActive ? "#fff" : " #EE9B00" };
+                return { color: isActive ? "#A350A3" : " #fff" };
               }}
             >
               <span id={toggle ? "Movies" : "MoviesLight"}>Pricing</span>
@@ -65,7 +65,7 @@ function NavBar() {
             />
             <HiSearch
               fontSize={21}
-              color={toggle ? "black" : "#ff206e"}
+              color={toggle ? "#A350A3" : "#C1436D"}
               id="search"
             />
             <div id="Color-switcher" onClick={() => setToggle(!toggle)}>
