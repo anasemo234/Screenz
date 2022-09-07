@@ -18,7 +18,7 @@ function NavBar() {
         <nav className={toggle ? "" : "navBarColor"}>
           <div className="nav-options">
             <NavLink to="">
-              <h1 id={toggle ? "" : "heading"}>SCREENZ</h1>
+              <h1 id={toggle ? "" : "heading"}>SilenZ</h1>
             </NavLink>
 
             <NavLink
