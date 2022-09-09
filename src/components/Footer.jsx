@@ -5,7 +5,7 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 function Footer() {
   return (
     <div class="footer-content">
-      <h3>SilentZ</h3>
+      <h3>SilenZ</h3>
       <p>Developed by Anasemos Kassahun</p>
       <ul class="socials">
         <li>
@@ -21,7 +21,7 @@ function Footer() {
       </ul>
       <div class="footer-bottom">
         <p>
-          copyright &copy;2022 <a href="#">AnasemosKassahun</a>{" "}
+          copyright &copy;2022 <a href="#">SilenZ</a> All rights reserved.{" "}
         </p>
       </div>
     </div>
