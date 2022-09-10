@@ -4,10 +4,10 @@ import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 function Footer() {
   return (
-    <div class="footer-content">
+    <div className="footer-content">
       <h3>SilenZ</h3>
       <p>Developed by Anasemos Kassahun</p>
-      <ul class="socials">
+      <ul className="socials">
         <li>
           <a href="https://github.com/anasemo234">
             <AiFillGithub />
@@ -19,7 +19,7 @@ function Footer() {
           </a>
         </li>
       </ul>
-      <div class="footer-bottom">
+      <div className="footer-bottom">
         <p>
           copyright &copy;2022 <a href="#">SilenZ</a> All rights reserved.{" "}
         </p>
