@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState, useContext } from "react";
 import { Container } from "./NavBar";
 import axios from "axios";
-import { AiFillPlayCircle, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import NoImg from "./no-image.png";
 import "../Styles/Videos.css";
 import TrailerTrending from "../Trailers/TrailerTrending";
@@ -43,12 +43,12 @@ function Trends() {
             return (
               <Fragment>
                 <div id={trailer ? "container" : "NoContainer"}>
-                  <AiFillPlayCircle
+                  {/* <AiFillPlayCircle
                     color="white"
                     fontSize={40}
                     id={trailer ? "playIcon" : "hide"}
                     onClick={() => TrendTitle(trend)}
-                  />
+                  /> */}
                   <img
                     src={
                       trend.poster_path

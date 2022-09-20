@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { Fragment, useContext, useEffect, useState } from "react";
-import { AiFillPlayCircle, AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { Container } from "./NavBar";
 import "../Styles/Videos.css";
 import NoImg from "./no-image.png";
@@ -44,12 +44,12 @@ function Movies() {
             return (
               <Fragment>
                 <div id={trailer ? "container" : "NoContainer"}>
-                  <AiFillPlayCircle
+                  {/* <AiFillPlayCircle
                     color="white"
                     fontSize={40}
                     id={trailer ? "playIcon" : "hide"}
                     onClick={() => MoviesTitle(movie)}
-                  />
+                  /> */}
                   <img
                     src={
                       movie.poster_path
