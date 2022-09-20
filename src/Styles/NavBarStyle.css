@@ -54,7 +54,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 #Color-switcher{
     position: relative;
     margin-right: 40px;
-    background-color: #413E44;
+    background-color: #ffffff;
     width: 80px;
     height: 40px;
     border-radius: 20px;
@@ -63,7 +63,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
     position: absolute;
     left: 5px;
     top: 4px;
-    background-color: #fff;
+    background-color: #A350A3;
     width: 33px;
     height: 33px;
     border-radius: 50%;
@@ -71,7 +71,7 @@ span #HomeLight:hover, #MoviesLight:hover, #TrendingLight:hover, #PricingLight:h
 }
 #Color-switcher-moved{
     position: absolute;
-    background-color: #fff;
+    background-color: #C1436D;
     left: 40px;
     top: 4px;
     width: 33px;

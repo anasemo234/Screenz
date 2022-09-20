@@ -35,7 +35,7 @@ function NavBar() {
                 return { color: isActive ? "#A350A3" : " #fff" };
               }}
             >
-              <span id={toggle ? "Movies" : "MoviesLight"}>Tv Shows</span>
+              <span id={toggle ? "Movies" : "MoviesLight"}>Shows</span>
             </NavLink>
 
             <NavLink
